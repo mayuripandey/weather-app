@@ -13,11 +13,10 @@ const dateBuilder = (d) => {
   let day = days[d.getDay()];
   let date = d.getDate();
   let month= months[d.getMonth()];
-  let year = d.getFullYear();
-
-  return '${day} ${date} ${month} ${year}'
+  let year = d.getFullYear(); 
+  let result = ""+day +" "+date+" "+month+" "+year;
+  return result;
 }
-
 
 
 
@@ -34,6 +33,12 @@ const dateBuilder = (d) => {
         <div className="location-box">
           <div className="location">New York City, US</div>
           <div className="date">{dateBuilder(new Date())}</div>
+        </div>
+        <div className="weather-box">
+          <div className="temp">
+            15°C
+            <div className="weather">Sunny</div>
+          </div>
         </div>
       </main>
     </div>
